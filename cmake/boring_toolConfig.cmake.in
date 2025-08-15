@@ -1,0 +1,16 @@
+@PACKAGE_INIT@
+
+include("${CMAKE_CURRENT_LIST_DIR}/boring_toolTargets.cmake")
+
+# 检查兼容性
+check_required_components(boring_tool)
+
+# 设置包含目录
+set_and_check(boring_tool_INCLUDE_DIRS "@PACKAGE_CMAKE_INSTALL_INCLUDEDIR@/boring_tool")
+set_and_check(boring_tool_LIBRARY_DIRS "@PACKAGE_CMAKE_INSTALL_LIBDIR@")
+
+# 版本信息
+set(boring_tool_VERSION "@PROJECT_VERSION@")
+set(boring_tool_VERSION_MAJOR "@PROJECT_VERSION_MAJOR@")
+set(boring_tool_VERSION_MINOR "@PROJECT_VERSION_MINOR@")
+set(boring_tool_VERSION_PATCH "@PROJECT_VERSION_PATCH@")
